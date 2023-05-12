@@ -1,3 +1,10 @@
+# Imports
+# -------------------------------------------------
+# 3rd Parties:-
 from django.contrib import admin
 
-# Register your models here.
+# internal:
+from .models import Profile
+# -------------------------------------------------
+
+admin.site.register(Profile)
