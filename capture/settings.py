@@ -11,21 +11,19 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import os 
+import os
 
 if os.path.exists('env.py'):
     import env
 
-# Cloudinary 
+# Cloudinary
 CLOUDINARY_STORAGE = {
-    'CLOUDINARY_URL' : os.environ.get('CLOUDINARY_URL')
+    'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
 }
 
 # Django folder to store media files 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORGAE = 'clodinary_storgae.MediaCludinaryStorage'
-
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,7 +38,7 @@ SECRET_KEY = 'django-insecure-)m&%&%_8q=2o63jxu7e(-c1qzu(+rqet^!=az%n5cei1!o6ho9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['8000-asmaaaamir-capture-api-d-fgtxtgug5v.us2.codeanyapp.com']
 
 
 # Application definition
@@ -56,7 +54,7 @@ INSTALLED_APPS = [
     'cloudinary',
 
 
-    
+
     'profiles',
 ]
 
