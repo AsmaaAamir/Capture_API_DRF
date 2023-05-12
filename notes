@@ -1,0 +1,5 @@
+pip3 install 'django<4'
+
+pip install django-cloudinary-storage
+pip install Pillow
+pip install djangorestframework 
