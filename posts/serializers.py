@@ -17,6 +17,23 @@ class PostSerializer(serializers.ModelSerializer):
     profile_id = serializers.ReadOnlyField(source='owner.profile.is')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
 
+ 
+    def validate_image(self, value):
+    """
+    Validation of the image being uploaded.
+    """
+    # Limiting the size of the image to 2 megabytes   
+        if value.size > 1024 * 1024 * 2:
+            raise serializers.ValidationsError(
+                'The image your trying to upload is too large. Max size is 2MB.')
+
+    # Limiting the height of the image to 4096 px
+        if value
+        return value
+
+
+
+
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -37,4 +54,5 @@ class PostSerializer(serializers.ModelSerializer):
             'profile_id',
             'profile_image',
             'image',
+            'category_choices',
         ]
