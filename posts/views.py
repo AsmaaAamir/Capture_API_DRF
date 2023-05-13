@@ -64,21 +64,21 @@ class PostDetail(APIView):
 
     def get(self, request, pk):
         post = self.get_object(pk)
-        serializer = PostSerializer|(
-            post, context=={'request': request}
+        serializer = PostSerializer(
+            post, context={'request': request}
         )
         return Response(serializer.data)
 
     def put(self, request, pk):
-        post = self.gte_object(pk)
+        post = self.get_object(pk)
         serializer = PostSerializer(
-            posts, data=request.data. context=={'request': request}
+            post, data=request.data, context={'request': request}
         )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response(
-            serializer.erros, status=status.HTTP_400-BAD_REQUEST
+            serializer.erros, status=status.HTTP_400_BAD_REQUEST
         )
 
     def delete(self, request, pk):
