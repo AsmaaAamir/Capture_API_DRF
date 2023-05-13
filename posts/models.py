@@ -29,13 +29,16 @@ class Post(models.Model):
 
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    category = models.CharField(max_length=100, choices=category_choices, blank=True)
+    category = models.CharField(max_length=100)
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(
         upload_to='images/', default='https://res.cloudinary.com/doow4kmj4/image/upload/v1683901095/capture_logo_nbnr9p.jpg',
         blank=True
+    )
+    country_choices = models.CharField(
+        max_length=50, choices=category_choices, default='normal'
     )
 
 
