@@ -22,7 +22,7 @@ class LikeList(generics.ListCreateAPIView):
         serializer.save(owner=self.request.user) 
 
  
-class LikeDetail(generics.RetrieveDestroyAPIViews):
+class LikeDetail(generics.RetrieveDestroyAPIView):
     """
     Users are able to retrieve and delete a like by id. 
     """
