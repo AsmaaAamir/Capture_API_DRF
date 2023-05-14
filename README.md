@@ -19,7 +19,26 @@ About the repository
 
 ## Database
 
+#### User Model
+
+
+#### Profile Model
+
+#### Post Model
+
+#### Like Model
+
+#### Comment Model 
+
+#### Follower Model
+
+
 ## Tecnologies
+
+### Languages & Frameworks
+    The following languages and framework utilised for this repository:
+        - Python 
+        - Django 
 
 ## Validations
 
