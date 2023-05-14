@@ -16,7 +16,7 @@ class LikeSerializer(serializers.ModelSerializer):
         model = Like
         fields = [
             'id',
-            'created',
+            'created_at',
             'owner',
             'post',
         ]

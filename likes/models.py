@@ -12,7 +12,7 @@ from posts.models import Post
 class Like(models.Model):
     """
     Allowing user to like post. like model is related to owner and post. While 
-    making sure user doesn't like the same post twice.
+    making sure user doesn't like the same post twice by adding 'unique_together'.
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, related_name='likes', on_delete=models.CASCADE)
