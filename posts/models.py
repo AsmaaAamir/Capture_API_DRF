@@ -24,7 +24,6 @@ class Post(models.Model):
         ('Niger', 'Niger'), ('Nepal', 'Nepal'), ('Yemen', 'Yemen'),('Uzbekistan', 'Uzbekistan'),
         ('Malaysia', 'Malaysia'), ('Iraq', 'Iraq'), ('Afghanistan', 'Afghanistan'),('Burundi', 'Burundi'),
         ('Rwanda','Rwanda'), ('Bolivia','Bolivia')
-    
     ]
 
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
