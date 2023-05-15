@@ -1,7 +1,7 @@
 # Imports
 # -------------------------------------------------
 # 3rd Parties:-
-from rest_framework import generice
+from rest_framework import generics
 
 
 # internal:
@@ -11,15 +11,15 @@ from capture.permissions import IsOwnerOrReadOnly
 # -------------------------------------------------
 
 
-class ProfileList(APIView):
+class ProfileList(generics.ListAPIView):
     """
     Created a class to view all Profile's in a list
     """
     serializer_class = ProfileSerializer
-    queeryset = Profile.objects.all()
+    queryset = Profile.objects.all()
 
 
-class ProfileDetail(APIView):
+class ProfileDetail(generics.RetrieveUpdateAPIView):
     """
     Created a class to edit profile's 
     """
