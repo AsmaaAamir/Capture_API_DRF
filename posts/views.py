@@ -18,9 +18,7 @@ class PostList(generics.ListCreateAPIView):
     can add the posts
     """
     serializer_class = PostSerializer
-    permission_classes = [
-        permissions.IsAuthenticatedOrReadOnly
-    ]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Post.objects.annotate(
         comments_count=Count('comment', distinct=True),
         likes_count=Count('likes', distinct=True)
@@ -41,9 +39,10 @@ class PostList(generics.ListCreateAPIView):
     ]
 
     filterset_fields =[
+        'owner__followed__owner__profile',
         'likes__owner__profile',
         'owner__profile',
-        'owner__followed__owner__profile',
+        
     ] 
 
     def perform_create(self, serializer):
@@ -56,9 +55,7 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     But only the auth user can edit or delets the post
     """
     serializer_class = PostSerializer
-    permission_classes = [
-        permissions.IsAuthenticatedOrReadOnly
-    ]
+    permission_classes = [IsOwnerOrReadOnly]
     queryset = Post.objects.annotate(
         comments_count=Count('comment', distinct=True),
         likes_count=Count('likes', distinct=True)
