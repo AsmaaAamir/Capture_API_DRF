@@ -3,9 +3,8 @@
 # 3rd Parties:-
 from rest_framework.decorators import api_view
 from rest_framework.response import Response 
-from .setting import (
-    JWT_AUTH_COOKIE, JWT_AUTH_REFRESH_COOKIE, JWT_AUTH_SAMESITE, JQT_AUTH_SECURE,
-)
+from .settings import (JWT_AUTH_COOKIE, JWT_AUTH_REFRESH_COOKIE, JWT_AUTH_SAMESITE, JQT_AUTH_SECURE)
+
 
 
 @api_view()
@@ -36,4 +35,3 @@ def logout_route(request):
         secure=JWT_AUTH_SECURE,
     )
     return response
-    
