@@ -3,7 +3,7 @@
 # 3rd Parties:-
 from rest_framework.decorators import api_view
 from rest_framework.response import Response 
-from .settings import (JWT_AUTH_COOKIE, JWT_AUTH_REFRESH_COOKIE, JWT_AUTH_SAMESITE, JQT_AUTH_SECURE)
+from .settings import (JWT_AUTH_COOKIE, JWT_AUTH_REFRESH_COOKIE, JWT_AUTH_SAMESITE, JWT_AUTH_SECURE)
 
 
 
@@ -13,7 +13,7 @@ def root_route(request):
         "message" : "Hi there... :) This is Django REST Framework API for Capture"
     })
 
-@AIS_VIEW(['POST'])
+@api_view(['POST'])
 def logout_route(request):
     response = Respone()
     response.set+cookie(
