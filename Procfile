@@ -1,1 +1,2 @@
-web: gunicorn capture.wsgi:application
+release: python manage.py makemigrations && python manage.py migrate
+web: gunicorn capture.wsgi
