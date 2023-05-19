@@ -14,7 +14,7 @@ class LikeListViewTests(APITestCase):
         """
         User.objects.create_user(username='asma', password='capture')
 
-    def test_not_logged_in_user_cant_follow(self):
+    def test_not_logged_in_user_cant_like(self):
         """
         test to see not loggeds in user can't like
         """
@@ -72,14 +72,6 @@ class LikeDetailViewTests(APITestCase):
         self.client.login(username='aamir', password='capture1')
         response = self.client.delete('/likes/1/')
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
-
-
-
-
-
-
-
-
 
     def test_user_can_retrieve_current_like_valid_id(self):
         """
