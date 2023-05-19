@@ -73,27 +73,20 @@ Additionally, only users who are logged in can do these actions on posts or prof
 | ** Test ** | ** Action ** | ** Expected result ** | ** Actual Result ** |
 | -----------| ------------ | --------------------- | ------------------- |
 | User | Create user | user can be created | Works as expected|
-| -----------| ------------ | --------------------- | ------------------- |
-
-<details><summary>User</summary>
-    <details><summary>Create User</summary>
-        <img src="docs/testing/create-user.png"></details>
-</details>
-
-| ** Test ** | ** Action ** | ** Expected result ** | ** Actual Result ** |
-| -----------| ------------ | --------------------- | ------------------- |
 | User/Admin | Permission |  Permission can be changed | Works as expected |
-| -----------| ------------ | --------------------- | ------------------- |
+| Profile | Update & delete user | A profile can be created, edited and deleted | Works as expected |
+| Post | Create, update & delete user | A post can be created, edited and deleted | Works as expected |
+| Likes | Like & Unlike | Post can be liked and unliked | Work as expected| 
+| Commets | Create, update & delete comments | User can  created, edited and deleted comment on post | Works as expected |
+| Follow | Follow & Unfollow | User can follow and un follow profile | Work as expected|
 
-<details><summary>Permissons</summary>
-    <details><summary>Change user permissions </summary>
-        <img src="docs/testing/change-permissions.png"></details>
+<details><summary>Create User</summary>
+     <img src="docs/testing/create-user.png">
 </details>
 
-| ** Test ** | ** Action ** | ** Expected result ** | ** Actual Result ** |
-| -----------| ------------ | --------------------- | ------------------- |
-| Profile | Update & delete user | A profile can be created, edited and deleted | Works as expected |
-| -----------| ------------ | --------------------- | ------------------- |
+<details><summary>Change Permissons</summary>
+    <img src="docs/testing/change-permissions.png">
+</details>
 
 <details><summary>Profile</summary>
     <details><summary>Change Profile</summary>
@@ -101,11 +94,6 @@ Additionally, only users who are logged in can do these actions on posts or prof
     <details><summary>Delete Profile</summary>
         <img src="docs/testing/delete-profile.png"></details>
 </details>
-
-| ** Test ** | ** Action ** | ** Expected result ** | ** Actual Result ** |
-| -----------| ------------ | --------------------- | ------------------- |
-| Post | Create, update & delete user | A post can be created, edited and deleted | Works as expected |
-| -----------| ------------ | --------------------- | ------------------- |
 
 <details><summary>Post</summary>
     <details><summary>Create Post</summary>
@@ -116,11 +104,6 @@ Additionally, only users who are logged in can do these actions on posts or prof
         <img src=""></details>
 </details>
 
-| ** Test ** | ** Action ** | ** Expected result ** | ** Actual Result ** |
-| -----------| ------------ | --------------------- | ------------------- |
-| Likes | Like & Unlike | Post can be liked and unliked | Work as expected|
-| -----------| ------------ | --------------------- | ------------------- |
-
 <details><summary>Like</summary>
     <details><summary>Like</summary>
         <img src="docs/testing/testing-liking-post.png"></details>
@@ -128,23 +111,12 @@ Additionally, only users who are logged in can do these actions on posts or prof
         <img src="docs/testing/test-unliking-post.png"></details>
 </details>
 
-
-| ** Test ** | ** Action ** | ** Expected result ** | ** Actual Result ** |
-| -----------| ------------ | --------------------- | ------------------- |
-| Commets | Create, update & delete comments | User can  created, edited and deleted comment on post | Works as expected |
-| -----------| ------------ | --------------------- | ------------------- |
-
 <details><summary>Comment</summary>
   <details><summary>Adding Comment</summary>
     <img src="docs/testing/test-adding-comment.png"></details>
     <details><summary>Removing comment</summary>
     <img src="docs/testing/tets-delteing-comment.png"></details>
 </details>
-
-| ** Test ** | ** Action ** | ** Expected result ** | ** Actual Result ** |
-| -----------| ------------ | --------------------- | ------------------- |
-| Follow | Follow & Unfollow | User can follow and un follow profile | Work as expected|
-| -----------| ------------ | --------------------- | ------------------- |
 
 <details><summary>Follow</summary>
     <details><summary>Following</summary>
