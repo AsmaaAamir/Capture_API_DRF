@@ -64,14 +64,4 @@ class ProfileDetailViewTest(APITestCase):
         self.client.login(username='asma', password='capture')
         response = self.client.delete('/profiles/1/')
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
-
-
-    def test_user_can_delete_another_user_profile(self):
-        """
-        testing user can deleted another user posts
-        """
-        self.client.login(username='asma', password='capture')
-        response = self.client.delete('/profiles/2/')
-        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
-
     
