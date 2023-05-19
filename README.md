@@ -1,8 +1,8 @@
 # Capture API in DRF 
 
-** Developer: Asma Aamir 
+Developer: Asma Aamir 
 
-[Live Link](....)
+[Live Link](https://capture-api-drf.herokuapp.com/)
 
 This repository has the Django REST Framework-based API created for the Capture front-end application. This link will take you to the [Live Website](....) and its [repository](....).
 
@@ -21,20 +21,42 @@ This is administrative part of the Capture project is the emphasis of the back-
 
 ## Database
 I developed the following models for the application to provide structure to the database model:
-<img src="">
+<details><summary>Database Model</summary>
+     <img src="docs/testing/database-diagram.png">
+</details>
 
 #### User Model
-
+- 
+- One-to-One relation with Profile model owner field
+- ForeignKey realation with Post model owner field
+- ForeignKey realation with Followee model owner and followed fields
+- ForeignKey realation with Comment model owner field
+- ForeignKey realation with Like model owner field
 
 #### Profile Model
+- The Profile model contains the following fields: Owner, name, bio, image, created_at and updated_at.
+- The owner field and the User model id field have a one-to-one relationship.
 
 #### Post Model
+- The Post model contains the following fields: Owner, title, category, description, created_at, updated_at, Image and country_choices.
+- ForeignKey realation with the Comment model post field
+- ForeignKey realation with  the Like model post field
 
 #### Like Model
+- The Like model contains the following fields: Owner, post and created_at.
+- Relationship between the User model field and foreign keys
+- User model id field and owner field have a foreign key relationship.
+- Post field and Post model post field have a foreign key relationship.
 
 #### Comment Model 
+- The Like model contains the following fields: Owner, post, content, created_at and updated_at.
+- The owner field and User model id field have a foreign key relation.
+- Between the post field and the user model post field, there is a ForeignKey relation.
 
 #### Follower Model
+- The Like model contains the following fields: Owner, followed and created_at.
+- User model id field and owner field have a foreign key relationship.
+- Between the followed field and the user model post field, there is a foreign key relation.
 
 
 ## Tecnologies
