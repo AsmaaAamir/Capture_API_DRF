@@ -9,10 +9,10 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import re
 from pathlib import Path
 import os
-import re
+import dj_database_url
 
 
 if os.path.exists('env.py'):
@@ -71,7 +71,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), 'localhost']
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), 'localhost', '8000-asmaaaamir-capture-api-d-ij1fvznda6.us2.codeanyapp.com']
 
 
 # Application definition
@@ -162,8 +162,9 @@ if 'DEV' in os.environ:
         }
 }
 else:
-    DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))} 
-    print('connteced')
+    DATABASES = {   
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    } 
 
 
 # Password validation
