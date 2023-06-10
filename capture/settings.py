@@ -70,7 +70,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = [('https://capture-api-drf.herokuapp.com/'), 'localhost']
+ALLOWED_HOSTS = [
+    os.environ.get('ALLOWED_HOST'), 
+    'localhost',
+]
 
 
 # Application definition
@@ -94,8 +97,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'dj_rest_auth.registration',
     'corsheaders',
-
-
     'profiles',
     'posts',
     'comments',
@@ -121,10 +122,6 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
     CORS_ALLOWED_ORIGIN_REGEXES = [
         rf"{extracted_url}.(eu|us)\d+\.codeanyapp\.com$",
-    ]
-else:
-    CORS_ALLOWED_ORIGIN_REGEXES = [
-        r"^https://.*\.gitpod\.io$",
     ]
 
 CORS_ALLOW_CREDENTIALS = True

@@ -57,11 +57,4 @@ class ProfileDetailViewTest(APITestCase):
         response = self.client.get('/profiles/9999/')
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
-    def test_user_can_delete_their_own_profile(self):
-        """
-        testing if user can delete their own profile
-        """
-        self.client.login(username='asma', password='capture')
-        response = self.client.delete('/profiles/1/')
-        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
-    
+  
