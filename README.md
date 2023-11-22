@@ -26,7 +26,6 @@ I developed the following models for the application to provide structure to the
 </details>
 
 #### User Model
-- 
 - One-to-One relation with Profile model owner field
 - ForeignKey realation with Post model owner field
 - ForeignKey realation with Followee model owner and followed fields
